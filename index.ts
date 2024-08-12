@@ -24,7 +24,7 @@ function addTodo(): void {
     }
 }
 
-function createList  (value: string): void {
+function createList (value: string): void {
     const li = document.createElement('li');
     
     li.innerHTML = `
