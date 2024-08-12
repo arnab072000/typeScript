@@ -37,9 +37,13 @@ function createList (value: string): void {
     deleteButton.className = 'deleteTodo';
     
     deleteButton.onclick = function (): void {
+
+        const conformation = confirm('Are you sure you want to delete?')
+        if(conformation) {
         todos = todos.filter(todo => todo !== value);
         listContainer.removeChild(li);
         saveTodo();
+        }
     };
     
     li.appendChild(deleteButton);
@@ -55,9 +59,12 @@ function loadTodos(): void {
 }
 
 function clearTodo(): void {
+    const conformationForAll = confirm('are you sure to delete all todos?');
+    if(conformationForAll) {
     listContainer.innerHTML = '';
     todos = [];
     saveTodo();
+    }
 }
 
 

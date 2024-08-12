@@ -26,9 +26,12 @@ function createList(value) {
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'deleteTodo';
     deleteButton.onclick = function () {
-        todos = todos.filter(function (todo) { return todo !== value; });
-        listContainer.removeChild(li);
-        saveTodo();
+        var conformation = confirm('Are you sure you want to delete?');
+        if (conformation) {
+            todos = todos.filter(function (todo) { return todo !== value; });
+            listContainer.removeChild(li);
+            saveTodo();
+        }
     };
     li.appendChild(deleteButton);
     listContainer.appendChild(li);
@@ -40,7 +43,10 @@ function loadTodos() {
     todos.forEach(createList);
 }
 function clearTodo() {
-    listContainer.innerHTML = '';
-    todos = [];
-    saveTodo();
+    var conformationForAll = confirm('are you sure to delete all todos');
+    if (conformationForAll) {
+        listContainer.innerHTML = '';
+        todos = [];
+        saveTodo();
+    }
 }
