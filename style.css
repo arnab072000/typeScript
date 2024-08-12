@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+      background: #becb6a;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+  h1{
+    margin-bottom: 20px;
+  }
+  
+  .todo-app{
+    width: 100%;
+    max-width: 550px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 100px 20px;
+    padding: 40px 30px 70px;
+  }
+  
+  .todo-Container{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-Todo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      border-radius: 20px;
+      margin-bottom: 25px;
+      padding-left: 10px;
+  }
+  
+  
+  label {
+    display: block;
+    width: 130px;
+    font-size: 16px;
+  }
+  
+  input{
+  flex: 1;
+  border: none;
+  /* border-radius: 5px; */
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+  }
+  
+  input,
+  input::placeholder {
+      font: 1rem/3;
+  }
+  
+  button{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 16px 50px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  button.clear-button {
+    border: none;
+    outline: none;
+    background: #dc3545;
+    color: #fff;
+    border-radius: 25px;
+    padding: 16px 50px;
+    cursor: pointer;
+  }
+  
+  .deleteTodo {
+    border: none;
+    outline: none;
+    background: #dc3545;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 25px;
+    cursor: pointer;
+  }
+  
+  ul li{
+    /* list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
